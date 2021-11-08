@@ -455,6 +455,13 @@ section .title::after{
   display: flex;
   align-items: center;
 }
+.contact .info {
+    margin: auto;
+}
+.contact .info .sub-title a{
+    color: #3F88C5;
+    font-weight: 50px;
+}
 .right form .button-area button{
   color: #fff;
   display: block;
