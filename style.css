@@ -143,7 +143,7 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: #3F88C5;
+    background: #000;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -273,15 +273,15 @@ section .title::after{
   }
   
 .services .card-wrap {
-    flex: 0 0 33.333%;
+    /* flex: 0 0 33.333%; */
     display: flex;
     padding: 10px; /* gutter width */
 }
 
 .services .card {
     box-shadow: 0 0 4px rgba(0,0,0,0.4);
-    flex: 0 0 100%;
-    width: calc(33% - 20px);
+    /* flex: 0 0 100%; */
+    /* width: calc(33% - 20px); */
     color: #fff;
     background: #222;
     text-align: center;
@@ -384,6 +384,7 @@ section .title::after{
 /* contact section styling */
 .contact .contact-content .column{
     width: calc(50% - 30px);
+    margin: auto;
 }
 .contact .contact-content .text{
     font-size: 1.3em;
@@ -406,7 +407,7 @@ section .title::after{
 }
 .contact .contact-content .row i{
     font-size: 1.5em;
-    color: #3F88C5;
+    color: #000;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
