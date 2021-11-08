@@ -1,3 +1,8 @@
+/* Navbar */
+.navbar .menu li a{
+    color: #fff;
+}
+
 section {
     padding: 0px;
 }
@@ -59,5 +64,7 @@ section {
 .post-paper h3 {
     font-size: 1.9em;
 }
+
+
 
 

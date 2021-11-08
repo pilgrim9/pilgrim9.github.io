@@ -23,12 +23,6 @@
     <nav class="navbar  ">
         <div class="max-width">
             <div class="logo"><a href="../index.html#projects"><i class="fas fa-arrow-left"></i></a></div>
-            <ul class="menu">
-                <li><a href="../index.html" class="menu-btn">Home</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </nav>
 
@@ -43,7 +37,7 @@
             
             <div class="post-body">
                 <h1 dir="ltr">
-                    Where did this come from?
+                    Why Less Crunchy?
                 </h1>
                 <p dir="ltr">
                     So me and my friends wanted to play a Pokemon Tabletop RPG, and we chose
@@ -57,62 +51,69 @@
                     <b>Crunchy</b>
                     <br/>
                     This is by no means a bad thing, in my opinion it speaks of the nature of
-                    the game. It also sort of works like a scale, the more and more complex
-                    math you need to do during your playing session, the crunchier the game
-                    becomes. If in a given system,I need to add up four different situational
+                    the game. It sort of works like a scale, the more and <b>
+                        more complex
+                        math
+                    </b> you need to do during your playing session and the <b>
+                        more
+                        mechanics and conditions
+                    </b> you need to keep track of, the <b>crunchier</b> the game
+                    becomes. If in a given system, I need to add up four different situational
                     bonuses to roll a hit, then that system is crunchier than one where I need
                     to roll a single die with just one static bonus.
-                </p>
-                <br/>
-                <p dir="ltr">
+                    <br/>
+                    <br>
                     As an example, Powered By the Apocalypse games have little crunch.
                     Shadowrun is crunchy. Dungeons &amp; Dragons 3.5e is crunchier than 5th
-                    Edition and Pokemon Tabletop United is crunchier than the version I wrote.
+                    Edition and <b>Pokemon Tabletop United is crunchier than the version I wrote</b>.
                 </p>
                 <br/>
                 <p dir="ltr">
                     We were having fun while playing, so in an attempt to recover the group's
                     attention I developed my own PTU version. It all started with suggestions I
-                    had and were piling up in my head. Those ended up as whole cuts and changes
+                    had been piling up in my head. Those ended up as whole cuts and changes
                     to the original game and in the following sections I will go over the most
-                    relevant, detailing my thought process behind my decisions.
+                    relevant, detailing the thought process behind my decisions.
                 </p>
                 <br/>
                 <h2 dir="ltr">
                     Divided by 5
                 </h2>
                 <p dir="ltr">
-                    This was the kickoff change, the one that set out the chain reaction.
+                    This was the kickoff change.
                     <br/>
                     <br/>
                     The game is about Pokemon, and the pokemon in those games level up from
                     level 1 to 100. This means that if I were to adapt Pokemon to a d20 system,
                     it would make sense to develop a d20 system and then multiply it by 5, then
                     everything looks one-hundred-ish. This may or may not be the way the
-                    developers designed the game, it's just a pattern I definitely noticed.
+                    developers designed the game, it's just a pattern I noticed in the design.
                     <br/>
                     <br/>
-                    Then the general smallest bonus unit in the game is a +5. There are some
-                    exceptions, but this is a rule, and the other bonuses are generally
+                    The smallest bonus you generally get in PTU, is a <b>+5</b>. There are some
+                    exceptions, but this is a rule. So we may call the +5 a unit, and the other bonuses were generally, but not always,
                     multiples of five.
                     <br/>
                     <br/>
-                    Implementing this change was fairly straightforward. Just divide most of
-                    the numerical values by 5 and we get the simplified bonus.
+                    But handling bigger numbers is generally harder than handling smaller ones. 
+                    Adding up 1 + 2 + 2 + 1 is faster than adding 5 + 8 + 13 + 4. 
+                    So I had to reduce the number's magnitude. Simplifying this was fairly straightforward. Just <b>divide</b> most of
+                    them <b>by 5</b> and we get a smaller, easier to handle, bonus.
                     <br/>
                     <br/>
-                    In the same vein, I simplified the damage bases. Pokemon games have a lot
-                    of attacks, called Moves, PTU has all of those moves as wells but, beside
-                    the dice rolled for a move, there is a number which can be referenced in a
-                    table where it tells you how many dice you would roll when using that Move.
-                    Why? Well because there are bonuses and penalties to the damage base of the
-                    move. So you get a +1, go to the chart, get the dice you need to roll and
-                    then calculate your additional situational bonuses.
+                    In the same vein, I simplified the <b>damage bases</b>. Pokemon games have a lot
+                    of attacks, called Moves, PTU has all of those moves as well but, next to
+                    the dice rolled for a move, there is a number, called damage base,  which can be referenced in a
+                    <b>chart</b> where it also tells you how many dice you would roll when using that Move.
+                    Why the redundancy? Well because there are bonuses and penalties to the damage base of the
+                    move. So instead of additional dice, you get a +1 to the damage base, go to the chart,
+                    get the new dice you need to roll and then calculate your additional situational bonuses.
                     <br/>
                     <br/>
                     To reduce the crunchiness, which was my aim here, I removed all bonuses to
-                    the Damage Base. Even more, Damage Base is no longer a mechanic surfaced to
-                    the players, it&#8217;s a design tool I used to balance and compare similar
+                    the Damage Base. So we players no longer need to check the chart to see how 
+                    many dice they need to roll. Even more, <b>Damage Base is no longer a mechanic</b> surfaced to
+                    the players, <b>it&#8217;s a design tool</b> I used to balance and compare similar
                     Moves. No abilities or features alter Damage Base anymore and the Moves now
                     only list the number of dice the player should roll, if any.
                 </p>
@@ -121,16 +122,16 @@
                     Injury System
                 </h2>
                 <p dir="ltr">
-                    It's an additional health point system. If any Pokemon were to accrue
+                    It's a secondary <b>health point system</b>. If any Pokemon were to accrue
                     enough injuries, independently of their HP, they faint. Injuries heal at a
                     different rate than HP and are acquired by meeting different conditions,
                     like receiving heavy blows.
                     <br/>
                     <br/>
-                    Injuries reduce the pokemon&#8217;s maximum HP. So a pokemon with healing
+                    Injuries also <b>reduce the pokemon&#8217;s maximum HP</b>. So a pokemon with healing
                     abilities would eventually get so many injuries that it&#8217;d make it
                     impossible for them to heal up enough to sustain the damage they are
-                    taking. So it is sort of a countermeasure to recovery strategies.
+                    taking. So it is sort of a <b>countermeasure</b> to recovery strategies.
                 </p>
                 <br/>
                 <p dir="ltr">
@@ -147,43 +148,43 @@
                 </p>
                 <p dir="ltr">
                     <br/>
-                    So I made the compromise of removing the Injury system but, in consequence,
+                    So I made the <b>compromise</b> of removing the Injury system but, in consequence,
                     I had to be extra careful with the number of uses allowed healing moves.
                 </p>
                 <br/>
                 <h2 dir="ltr">
-                    Situational vs Significant, Volatile vs Static
+                    Situational and Volatile vs Significant and Static
                 </h2>
                 <p dir="ltr">
-                    There are a lot of sources for Bonuses in PTU. Moves, equipment,
+                    There are a lot of sources for <b>Bonuses</b> in PTU, numbers you add to your dice rolls. Moves, equipment,
                     consumables, food, abilities, features, edges. And&#8230; I think
-                    that&#8217;s it, but I might be missing a few. But the crunchy part is not
-                    the number of sources, it&#8217;s the fact that they may come and go or
-                    that they might be active due to certain criteria being met. And multiple
+                    that&#8217;s it, but I might be missing a few. But the crunchy part is not specifically
+                    the number of sources, it&#8217;s the fact that they <b>only last for a certain amount of time</b> or
+                    that they might be active due to <b>certain criteria</b> being met. And multiple
                     of them could be active or inactive at the same time, having to tweak the
-                    numbers every turn.
+                    numbers every turn. This is what it means for a bonus to be <b>volatile</b> and <b>situational</b>, respectively.
                     <br/>
                     <br/>
                 </p>
                 <p dir="ltr">
-                    And there is this concept of reducing the amount of headspace required by
-                    the players. In this case, it means that the player is
+                    And to reduce crunchiness, we can <b>reduce the amount of headspace</b> required by
+                    the players. Using a lot of headspace, means that the player is
                     trying to keep track of all of this situational bonuses and penalties and
                     trying to remember when they need to apply and when they expire. This takes
-                    up space in their minds, which might be fun for some players, but it is a
-                    consequence of crunchy mechanics.
+                    up space in their minds, which might be fun for some players, 
+                    but it is mostly a consequence of crunchy mechanics.
                     <br/>
                     <br/>
-                    If the bonuses were only static (which many but not all are), the game
-                    would need some prep-work but most of the playtime would be just
-                    referencing the numbers of the sheets and rolling. But the bonuses change,
-                    which means a lot of on-the-fly calculations.
+                    If the bonuses were only <b>static</b>, which means they don't vary during play, the game
+                    would need some prep-work but during playtime, players would just need to
+                    reference the numbers of the sheets and roll. But the bonuses change,
+                    which means there are a lot of on-the-fly calculations.
                     <br/>
                     <br/>
                     So to reduce the crunchiness here, I took a few pages from Dungeons &amp;
-                    Dragons 5th edition. Bonuses are now only static or significant (and
-                    unique). Static bonuses make you work up-front, so they are good for this
-                    purpose. The other method is making them significant (and unique). You can
+                    Dragons 5th edition. <b>Bonuses are now only static or significant.</b> 
+                    Static bonuses make you work up-front, so they are good at streamlining gameplay. 
+                    The other method is making them significant. You can
                     increase significance by turning the bonus number into an action, like
                     rolling a die. The Advantage and Disadvantage mechanic is an example of
                     significant bonuses in dungeons and dragons.
@@ -192,16 +193,16 @@
                 <p class="side-note">
                     <b>Advantage and Disadvantage</b>
                     <br/>
-                    Characters rolling with either Advantage and Disadvantage roll two d20 when
-                    taking the affected action. If they have advantage, they pick the highest
-                    roll of the two. If they have Disadvantage, they pick the lowest.
+                    Characters rolling with either Advantage and Disadvantage <b>roll two d20</b> when
+                    taking the affected action. If they have <b>Advantage</b>, they <b>pick the highest</b>
+                    roll of the two. If they have <b>Disadvantage</b>, they <b>pick the lowest</b>.
                 </p>
                 <p>
                     <br/>
-                    Uniqueness is a compromise. This means that you choose that players cannot
-                    get more than one bonus to the same action because there isn&#8217;t one.
-                    This is the only one. An example of this is the bless spell in Dungeons and
-                    Dragons.
+                    You can also make bonuses significant by making them <b>Unique</b>.
+                    But uniqueness is a compromise. If there is only one ability that increases your damage in the whole game, players will remember it.
+                    That also means players will not be able to get more than one bonus to the same action because there, simply, isn&#8217;t any other one.
+                    An example of this is the bless spell in Dungeons and Dragons.
                     <br/>
                     <br/>
                 </p>
@@ -209,34 +210,41 @@
                     Bless is a volatile bonus, I lasts only one minute or until the caster
                     breaks their concentration. And it reads:
                 </p>
-                <p dir="ltr">
-                    You bless up to three creatures of your choice within range. Whenever a
-                    target makes an attack roll or a saving throw before the spell ends, the
-                    target can roll a d4 and add the number rolled to the attack roll or saving
+                <p dir="ltr" class="side-note">
+                    You bless up to three creatures of your choice within range.<b>
+                         Whenever a
+                        target makes an attack roll or a saving throw
+                    </b> before the spell ends, the
+                    target can <b>roll a d4</b> and add the number rolled to the attack roll or saving
                     throw.
                 </p>
                 <br/>
                 <p dir="ltr">
-                    This means that when they roll or try to save, they roll a d20 + an
-                    additional d4. This bonus is not only unique because it&#8217;s the only
-                    bonus (that I&#8216;m aware of) that applies to attack rolls, it&#8217;s
-                    also significant, because the player is rolling an additional die. And
-                    it&#8217;s not a complete subsystem like Advantage, it&#8217;s a relatively
-                    small bonus, and if there were multiple of these, players would have to
-                    remember to roll for all of them and keep track of them at the same time
-                    (the Concentration mechanic also helps here). But because this is the only
-                    one, people roll a d20, add the static modifier and ask, do we have bless?
+                    This means that when they roll to attack or try to save, they roll a d20 + an
+                    additional d4. This bonus is not only <b>unique</b> because it&#8217;s the only
+                    bonus (that I&#8216;m aware of) that applies to attack rolls, <b>
+                        it&#8217;s
+                        also significant
+                    </b>, because the player is rolling an additional die, they are taking an additional, physical action. 
+                    And since this is the only bonus to attack, people roll a d20, add the static modifier and ask, <b>do we have bless?</b>
                     And whatever the answer, they move on to advantage.
                     <br/>
                     <br/>
                 </p>
+                <p>
+                    These methods can, of course, <b>backfire</b>. Add too many "Significant" bonuses and players are rolling a ton of dice. 
+                    Make your Unique bonuses trivial and they will forget about them. 
+                    Static bonuses as well, if every time a player levels up they need to recalculate all of their stats, 
+                    then this alone might be cumbersome enough to be called too crunchy.
+                </p>
+                <br>
                 <p dir="ltr">
                     So what did this mean for my version of PTU? It meant getting rid of
                     volatile and situational bonuses and replacing them with significant and
-                    unique ones. Did I achieve that? Partially. I added an advantage system and
+                    unique ones. <b>Did I achieve that?</b> Partially. I added an advantage system and
                     that helped to get rid of the attack bonuses, but since I was trying to
-                    keep the amount of content the same, it meant that it was hard to ensure
-                    uniqueness, and I failed at that. Taking one step forward would be by
+                    keep the amount of content the same, it meant that it was hard to ensure uniqueness,
+                     and I might not have achieved it. I could take one step forward by
                     cutting content. There are a lot of Moves and Abilities, and they add
                     uniqueness to the pokemon themselves, but also add complexity to the game.
                 </p>
@@ -250,7 +258,7 @@
                 </p>
                 <br/>
                 <p dir="ltr">
-                    Combat stages is a core mechanic in the pokemon games, and PTU has most, if
+                    <b>Combat stages is a core mechanic</b> in the pokemon games, and PTU has most, if
                     not all, of those in their rules, plus some extras (like injuries). They
                     are not 1 to 1 translations, they are adaptations and pretty good ones at
                     that. Combat stages in the pokemon games are multipliers to pokemon stats.
@@ -261,13 +269,14 @@
                 <p dir="ltr">
                     But combat stages vary throughout a battle. They are affected by Moves and
                     abilities and features. They are volatile and, as established, crunchy. So
-                    I should remove it, right?
+                    <b>I should remove it</b>, right?
                     <br/>
                     <br/>
-                    Well, here is the issue, Combat Stages is too much of a core mechanic of
-                    pokemon games. One solution was to turn the most important buff Moves into
+                    Well, here is <b>the issue</b>, Combat Stages is too much of a core mechanic of
+                    pokemon games, and I wanted to keep all of those in this adaptation. 
+                    One solution was to turn the most important buff Moves into
                     unique and iconic Buffs. Like Haste or Barkskin in D&amp;D. But this meant
-                    cuttin other moves, which is something I didn&#8217;t want to do.
+                    cutting other moves, which is something I didn&#8217;t want to do.
                     <br/>
                     <br/>
                     So Combat Stages stayed. I'm pretty sure they are the only volatile bonus
@@ -280,7 +289,7 @@
                     Complex Skills
                 </h2>
                 <p dir="ltr">
-                    Some RPGs have skills, they represent your capabilities outside of combat.
+                    Some RPGs have skills, they generally represent out of combat capabilities.
                     Are you good at bartering? How much do you know about the world? If you try
                     to be charming, what are your chances of actually succeeding? All of these
                     are also represented in PTU.
@@ -289,36 +298,37 @@
                     Skills had some issues that increased the game&#8217;s complexity and
                     crunchiness. Skills, here, affected many things. And example would be that
                     to calculate how many spaces a character could move on the board they had
-                    to average their athletics and acrobatics skills together. Skills also
-                    influenced your carry capacity, which should be ok, but the thing that
-                    affected crunchiness the most was Edges.
+                    to average their "athletics" and "acrobatics" skills together. Skills also
+                    influenced some other secondary stats, which should be ok, but the thing that
+                    affected crunchiness the most was <b>Edges</b>.
                     <br/>
                     <br/>
-                    Edges are small, unique and flavorful abilities used to spice up a
-                    character. Most Edges had an influence over combat, or you could spend
-                    edges to level up a skill on a 1-to-1 basis. A player character acquired 4
+                    <b>Edges are small, unique and flavorful abilities</b> used to spice up a
+                    character. Most Edges had an influence over combat, or you could also <b>spend
+                    edges to level up a skill</b> on a 1-to-1 basis. A player character acquired 4
                     edges at level 1 and 1 every other level thereafter. This meant that
                     players had to make a few choices at the first level only. And some other
                     while leveling up. But there were two issues here. One is that they
-                    weren&#8217;t really impactful or powerful. This is a common pattern in
-                    crunchier systems, where characters and their power level are actually sums
+                    weren&#8217;t really impactful or powerful. And this is a common pattern in
+                    crunchier systems, where character's power level are actually sums
                     of smaller choices and bonuses.
                     <br/>
                     <br/>
-                    The other issue laid with the other choice system. Features. On the levels
+                    The other issue laid with the other choice system. <b>Features</b>. On the levels
                     you didn&#8217;t gain an edge, you earned a Feature. Features were more
                     powerful, approximately twice as much, than an Edge. But to qualify for a
-                    Feature you generally had to meet some requirements. Those requirements
-                    came, generally in the form of Skills, and some requirements where pretty
-                    tight. This meant that you had to plan your skills ahead of time if you
-                    wanted to hit the Features you wanted, and that took some time.
+                    Feature you generally had to meet some <b>requirements</b>. Those requirements
+                    came, generally, in the form of Skills, and some requirements where pretty
+                    tight. This meant that you had to plan your skills, and thus your Edges, ahead of time if you
+                    wanted to hit the Features you liked, and that took some time.
                 </p>
                 <br/>
                 <p dir="ltr">
-                    So how to solve this? Cut the edges. Players get a skill point every two
+                    Even if it's not playtime, planning time can be crunchy as well. So how did I reduce it? 
+                    I cut the Edges. Players get a skill point every two
                     levels and I buffed some iconic Edges and turned them into Features.
                     Features were also grouped by classes and you could take them in any order.
-                    I removed that as well, classes are now more linear and allow fewer choices
+                    I removed that as well, classes are now more linear and offer fewer choices
                     but the process is more streamlined (classes sort of had a dependency path
                     already so it wasn&#8217;t that hard).
                 </p>
@@ -429,7 +439,9 @@
                     <a href="https://pokemontabletop.com/" target="_blank">
                         Pokemon Tabletop United Official Site
                     </a>
-                    <br> 
+                    <a href="https://docs.google.com/spreadsheets/d/11js4XhI11-IemeRfkofwHS3YbAz8xSyQpSIWUAEfpWM/edit#gid=1084264500" target="_blank">
+                        Original Companion Spreadshet
+                    </a>
                 </div>
             </div>
         </div>
