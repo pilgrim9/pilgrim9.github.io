@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="ptu-overhaul/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+</head>
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar  ">
+        <div class="max-width">
+            <div class="logo"><a href="../index.html#projects"><i class="fas fa-arrow-left"></i></a></div>
+            <ul class="menu">
+                <li><a href="../index.html" class="menu-btn">Home</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="post-header">
+            <img src="https://images.pexels.com/photos/1310847/pexels-photo-1310847.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" title='"Person Holding Pokemon Ball Toy" - Vincent M.A. Janssen'/>
+            <h2 class="title">Making a Pokemon RPG Less "Crunchy"</h2>
+        </div>
+    </section>
+    <section>
+        <div class="post-paper">
+            
+            <div class="post-body">
+                <h1 dir="ltr">
+                    Where did this come from?
+                </h1>
+                <p dir="ltr">
+                    So me and my friends wanted to play a Pokemon Tabletop RPG, and we chose
+                    Pokemon Tabletop United (PTU for short). This game is fun and crunchy. And
+                    my friends didn&#8217;t especially like crunching numbers during sessions,
+                    so the game ended up losing popularity in our playgroup.
+                    <br/>
+                    <br/>
+                </p>
+                <p dir="ltr" class="side-note">
+                    <b>Crunchy</b>
+                    <br/>
+                    This is by no means a bad thing, in my opinion it speaks of the nature of
+                    the game. It also sort of works like a scale, the more and more complex
+                    math you need to do during your playing session, the crunchier the game
+                    becomes. If in a given system,I need to add up four different situational
+                    bonuses to roll a hit, then that system is crunchier than one where I need
+                    to roll a single die with just one static bonus.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    As an example, Powered By the Apocalypse games have little crunch.
+                    Shadowrun is crunchy. Dungeons &amp; Dragons 3.5e is crunchier than 5th
+                    Edition and Pokemon Tabletop United is crunchier than the version I wrote.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    We were having fun while playing, so in an attempt to recover the group's
+                    attention I developed my own PTU version. It all started with suggestions I
+                    had and were piling up in my head. Those ended up as whole cuts and changes
+                    to the original game and in the following sections I will go over the most
+                    relevant, detailing my thought process behind my decisions.
+                </p>
+                <br/>
+                <h2 dir="ltr">
+                    Divided by 5
+                </h2>
+                <p dir="ltr">
+                    This was the kickoff change, the one that set out the chain reaction.
+                    <br/>
+                    <br/>
+                    The game is about Pokemon, and the pokemon in those games level up from
+                    level 1 to 100. This means that if I were to adapt Pokemon to a d20 system,
+                    it would make sense to develop a d20 system and then multiply it by 5, then
+                    everything looks one-hundred-ish. This may or may not be the way the
+                    developers designed the game, it's just a pattern I definitely noticed.
+                    <br/>
+                    <br/>
+                    Then the general smallest bonus unit in the game is a +5. There are some
+                    exceptions, but this is a rule, and the other bonuses are generally
+                    multiples of five.
+                    <br/>
+                    <br/>
+                    Implementing this change was fairly straightforward. Just divide most of
+                    the numerical values by 5 and we get the simplified bonus.
+                    <br/>
+                    <br/>
+                    In the same vein, I simplified the damage bases. Pokemon games have a lot
+                    of attacks, called Moves, PTU has all of those moves as wells but, beside
+                    the dice rolled for a move, there is a number which can be referenced in a
+                    table where it tells you how many dice you would roll when using that Move.
+                    Why? Well because there are bonuses and penalties to the damage base of the
+                    move. So you get a +1, go to the chart, get the dice you need to roll and
+                    then calculate your additional situational bonuses.
+                    <br/>
+                    <br/>
+                    To reduce the crunchiness, which was my aim here, I removed all bonuses to
+                    the Damage Base. Even more, Damage Base is no longer a mechanic surfaced to
+                    the players, it&#8217;s a design tool I used to balance and compare similar
+                    Moves. No abilities or features alter Damage Base anymore and the Moves now
+                    only list the number of dice the player should roll, if any.
+                </p>
+                <h2 dir="ltr">
+                    <br/>
+                    Injury System
+                </h2>
+                <p dir="ltr">
+                    It's an additional health point system. If any Pokemon were to accrue
+                    enough injuries, independently of their HP, they faint. Injuries heal at a
+                    different rate than HP and are acquired by meeting different conditions,
+                    like receiving heavy blows.
+                    <br/>
+                    <br/>
+                    Injuries reduce the pokemon&#8217;s maximum HP. So a pokemon with healing
+                    abilities would eventually get so many injuries that it&#8217;d make it
+                    impossible for them to heal up enough to sustain the damage they are
+                    taking. So it is sort of a countermeasure to recovery strategies.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    I took a different approach. I removed injuries and tried to handle
+                    recovery strategies by limiting them through the Moves Frequency mechanic.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    Moves have a Frequency, they can be used a number of times at different
+                    intervals. At-will can be used freely, scene moves can be used a number of
+                    times per fight and daily moves a number of times per day. Healing moves
+                    fall generally under the daily category, because they influence HP, which
+                    is a resource restored by resting.
+                </p>
+                <p dir="ltr">
+                    <br/>
+                    So I made the compromise of removing the Injury system but, in consequence,
+                    I had to be extra careful with the number of uses allowed healing moves.
+                </p>
+                <br/>
+                <h2 dir="ltr">
+                    Situational vs Significant, Volatile vs Static
+                </h2>
+                <p dir="ltr">
+                    There are a lot of sources for Bonuses in PTU. Moves, equipment,
+                    consumables, food, abilities, features, edges. And&#8230; I think
+                    that&#8217;s it, but I might be missing a few. But the crunchy part is not
+                    the number of sources, it&#8217;s the fact that they may come and go or
+                    that they might be active due to certain criteria being met. And multiple
+                    of them could be active or inactive at the same time, having to tweak the
+                    numbers every turn.
+                    <br/>
+                    <br/>
+                </p>
+                <p dir="ltr">
+                    And there is this concept of reducing the amount of headspace required by
+                    the players. In this case, it means that the player is
+                    trying to keep track of all of this situational bonuses and penalties and
+                    trying to remember when they need to apply and when they expire. This takes
+                    up space in their minds, which might be fun for some players, but it is a
+                    consequence of crunchy mechanics.
+                    <br/>
+                    <br/>
+                    If the bonuses were only static (which many but not all are), the game
+                    would need some prep-work but most of the playtime would be just
+                    referencing the numbers of the sheets and rolling. But the bonuses change,
+                    which means a lot of on-the-fly calculations.
+                    <br/>
+                    <br/>
+                    So to reduce the crunchiness here, I took a few pages from Dungeons &amp;
+                    Dragons 5th edition. Bonuses are now only static or significant (and
+                    unique). Static bonuses make you work up-front, so they are good for this
+                    purpose. The other method is making them significant (and unique). You can
+                    increase significance by turning the bonus number into an action, like
+                    rolling a die. The Advantage and Disadvantage mechanic is an example of
+                    significant bonuses in dungeons and dragons.
+                    <br/>
+                    <br/>
+                <p class="side-note">
+                    <b>Advantage and Disadvantage</b>
+                    <br/>
+                    Characters rolling with either Advantage and Disadvantage roll two d20 when
+                    taking the affected action. If they have advantage, they pick the highest
+                    roll of the two. If they have Disadvantage, they pick the lowest.
+                </p>
+                <p>
+                    <br/>
+                    Uniqueness is a compromise. This means that you choose that players cannot
+                    get more than one bonus to the same action because there isn&#8217;t one.
+                    This is the only one. An example of this is the bless spell in Dungeons and
+                    Dragons.
+                    <br/>
+                    <br/>
+                </p>
+                <p dir="ltr">
+                    Bless is a volatile bonus, I lasts only one minute or until the caster
+                    breaks their concentration. And it reads:
+                </p>
+                <p dir="ltr">
+                    You bless up to three creatures of your choice within range. Whenever a
+                    target makes an attack roll or a saving throw before the spell ends, the
+                    target can roll a d4 and add the number rolled to the attack roll or saving
+                    throw.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    This means that when they roll or try to save, they roll a d20 + an
+                    additional d4. This bonus is not only unique because it&#8217;s the only
+                    bonus (that I&#8216;m aware of) that applies to attack rolls, it&#8217;s
+                    also significant, because the player is rolling an additional die. And
+                    it&#8217;s not a complete subsystem like Advantage, it&#8217;s a relatively
+                    small bonus, and if there were multiple of these, players would have to
+                    remember to roll for all of them and keep track of them at the same time
+                    (the Concentration mechanic also helps here). But because this is the only
+                    one, people roll a d20, add the static modifier and ask, do we have bless?
+                    And whatever the answer, they move on to advantage.
+                    <br/>
+                    <br/>
+                </p>
+                <p dir="ltr">
+                    So what did this mean for my version of PTU? It meant getting rid of
+                    volatile and situational bonuses and replacing them with significant and
+                    unique ones. Did I achieve that? Partially. I added an advantage system and
+                    that helped to get rid of the attack bonuses, but since I was trying to
+                    keep the amount of content the same, it meant that it was hard to ensure
+                    uniqueness, and I failed at that. Taking one step forward would be by
+                    cutting content. There are a lot of Moves and Abilities, and they add
+                    uniqueness to the pokemon themselves, but also add complexity to the game.
+                </p>
+                <br>
+                <h2 dir="ltr">
+                    Combat Stages, a Volatile System
+                </h2>
+                <p dir="ltr">
+                    Here is another compromise I had to make. One I'm not entirely satisfied
+                    with.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    Combat stages is a core mechanic in the pokemon games, and PTU has most, if
+                    not all, of those in their rules, plus some extras (like injuries). They
+                    are not 1 to 1 translations, they are adaptations and pretty good ones at
+                    that. Combat stages in the pokemon games are multipliers to pokemon stats.
+                    Multiplication is a basic operation, but not the most basic. So I replaced
+                    the multiplication part with addition.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    But combat stages vary throughout a battle. They are affected by Moves and
+                    abilities and features. They are volatile and, as established, crunchy. So
+                    I should remove it, right?
+                    <br/>
+                    <br/>
+                    Well, here is the issue, Combat Stages is too much of a core mechanic of
+                    pokemon games. One solution was to turn the most important buff Moves into
+                    unique and iconic Buffs. Like Haste or Barkskin in D&amp;D. But this meant
+                    cuttin other moves, which is something I didn&#8217;t want to do.
+                    <br/>
+                    <br/>
+                    So Combat Stages stayed. I'm pretty sure they are the only volatile bonus
+                    remaining (except for some abilities I failed to translate), and they are a
+                    core mechanic of the game, but still, it takes up headspace, and makes the
+                    game a bit more crunchy.
+                </p>
+                <br/>
+                <h2 dir="ltr">
+                    Complex Skills
+                </h2>
+                <p dir="ltr">
+                    Some RPGs have skills, they represent your capabilities outside of combat.
+                    Are you good at bartering? How much do you know about the world? If you try
+                    to be charming, what are your chances of actually succeeding? All of these
+                    are also represented in PTU.
+                    <br/>
+                    <br/>
+                    Skills had some issues that increased the game&#8217;s complexity and
+                    crunchiness. Skills, here, affected many things. And example would be that
+                    to calculate how many spaces a character could move on the board they had
+                    to average their athletics and acrobatics skills together. Skills also
+                    influenced your carry capacity, which should be ok, but the thing that
+                    affected crunchiness the most was Edges.
+                    <br/>
+                    <br/>
+                    Edges are small, unique and flavorful abilities used to spice up a
+                    character. Most Edges had an influence over combat, or you could spend
+                    edges to level up a skill on a 1-to-1 basis. A player character acquired 4
+                    edges at level 1 and 1 every other level thereafter. This meant that
+                    players had to make a few choices at the first level only. And some other
+                    while leveling up. But there were two issues here. One is that they
+                    weren&#8217;t really impactful or powerful. This is a common pattern in
+                    crunchier systems, where characters and their power level are actually sums
+                    of smaller choices and bonuses.
+                    <br/>
+                    <br/>
+                    The other issue laid with the other choice system. Features. On the levels
+                    you didn&#8217;t gain an edge, you earned a Feature. Features were more
+                    powerful, approximately twice as much, than an Edge. But to qualify for a
+                    Feature you generally had to meet some requirements. Those requirements
+                    came, generally in the form of Skills, and some requirements where pretty
+                    tight. This meant that you had to plan your skills ahead of time if you
+                    wanted to hit the Features you wanted, and that took some time.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    So how to solve this? Cut the edges. Players get a skill point every two
+                    levels and I buffed some iconic Edges and turned them into Features.
+                    Features were also grouped by classes and you could take them in any order.
+                    I removed that as well, classes are now more linear and allow fewer choices
+                    but the process is more streamlined (classes sort of had a dependency path
+                    already so it wasn&#8217;t that hard).
+                </p>
+                <br>
+                <h2 dir="ltr">
+                    Other changes
+                </h2>
+                <h3 dir="ltr">
+                    Attack AC
+                </h3>
+                <p dir="ltr">
+                    Simplifying, all moves had a penalty to their attack roll. It was,
+                    generally, -2. So I got rid of the penalty. I thought about increasing
+                    defense by +2 for everyone, but in the end I just ditched it. Moves with
+                    higher penalties now roll with Disadvantage (roll twice, pick worse).
+                </p>
+                <br/>
+                <h3 dir="ltr">
+                    Tutor Points
+                </h3>
+                <p dir="ltr">
+                    Pokemon had these points that allowed them to learn extra moves and
+                    abilities outside of the ones they could learn by leveling up. I removed
+                    them. These points were a throttle to avoid players teaching too many of
+                    these to their pokemon, but there were already some other throttlers in
+                    place, in addition to these points, so I had to be careful, but I thought I
+                    could do without them.
+                    <br/>
+                    <br/>
+                </p>
+                <h3 dir="ltr">
+                    Ability Points
+                </h3>
+                <p dir="ltr">
+                    Another throttler. This time it&#8217;s for player characters. Some
+                    abilities were too powerful and thus had to be limited and had their usage
+                    weighed against other abilities. I decided to balance them via the
+                    Frequency mechanic instead.
+                    <br/>
+                    <br/>
+                </p>
+                <h3 dir="ltr">
+                    The bulk of the work
+                </h3>
+                <p dir="ltr">
+                    It was going over every Feature, Ability and Move in the game. Adapt it and
+                    rework it if necessary. I still keep the ones that I couldn&#8217;t make
+                    work in my notes. If you want to look for them, they are volatile.
+                    <br/>
+                    <br/>
+                </p>
+                <h3 dir="ltr">
+                    3 Pokemon per team
+                </h3>
+                <p dir="ltr">
+                    This is more of a house rule, but tracking all 6 pokemon per player might
+                    be too much, so in my playgroup we limit it.
+                    <br/>
+                    <br/>
+                </p>
+                <h2 dir="ltr">
+                    <br/>
+                    Want to play it?
+                </h2>
+                <p dir="ltr">
+                    If you want to check out my version of PTU, there is a link below for it as
+                    well as for the companion spreadsheet. Both are required. In the document
+                    you will find the core rules and Features and in the spreadsheet
+                    there&#8217;s the list of all items, abilities and moves. If you want to
+                    play, it&#8217;s better if you are familiar with the original and willing
+                    to make your own changes to these rules, since, as I mentioned above, this
+                    wasn't playtested.
+                    <br/>
+                    <br/>
+                    The only dependency of my ruleset to the older ruleset is the Pokedex PDF
+                    which you will have to download from the original rules package (also
+                    linked below). Instructions on how to use it are in the Pokemon Progression
+                    section of my document.
+                    <br/>
+                    <br/>
+                </p>
+                <h2 dir="ltr">
+                    Summary
+                </h2>
+                <p dir="ltr">
+                    It was a long but fun project. It is not complete, but it is ready to
+                    playtest. Sadly I never got to playtest it with my group. Someday I might,
+                    or, most likely, I'll build a softer system from the ground up, making
+                    compromises on my own terms.
+                </p>
+                <br/>
+                <p dir="ltr">
+                    If you read this far, thank you for reading. I hope this has been
+                    insightful for learning about my creative process.
+                </p>
+                <br/>
+
+                <div class="links">
+                    <br>
+                    <a href="https://docs.google.com/document/d/12Bx97G7RYyv9_gOIzfQE730TiI2VkMPE4mRqwgI4tPM/edit?usp=sharing" target="_blank">
+                        My version of the rules
+                    </a>
+                    <br>
+                    <a href="https://docs.google.com/spreadsheets/d/1v8Y9VNvGB1qGrvxSb_Q5F0QlZ4bsc_rScz7P83Htpu0/edit?usp=sharing">
+                        Companion spreadsheet
+                    </a>
+                    <br>
+                    <a href="https://pokemontabletop.com/" target="_blank">
+                        Pokemon Tabletop United Official Site
+                    </a>
+                    <br> 
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- footer section start -->
+    <footer>
+        <span>Created By Manuel Gorostiaga | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
