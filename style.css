@@ -10,6 +10,11 @@
 html{
     scroll-behavior: smooth;
 }
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
 
 /* custom scroll bar */
 ::-webkit-scrollbar {
@@ -52,7 +57,7 @@ section .title{
     text-align: center;
     font-size: 40px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -85,11 +90,10 @@ section .title::after{
     padding: 15px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
-    background: #3F88C5;
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #3F88C5;
+    background: #000;
 }
 .navbar .max-width{
     display: flex;
@@ -106,7 +110,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
-    color: #fff;
+    color: #000;
 }
 .navbar .menu li{
     list-style: none;
@@ -114,7 +118,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: #000;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -123,8 +127,11 @@ section .title::after{
 .navbar .menu li a:hover{
     color: #3F88C5;
 }
-.navbar.sticky .menu li a:hover{
+.navbar.sticky .menu li a{
     color: #fff;
+}
+.navbar.sticky .menu li a:hover{
+    color: #3F88C5;
 }
 
 /* menu btn styling */
@@ -191,14 +198,10 @@ section .title::after{
     font-size: 75px;
     font-weight: 600;
     text-align: center;
-
-    /* margin-left: -3px; */
 }
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;    
-    margin-left: -5px;
-
     text-align: center;
 }
 .home .home-content .text-3 span{
@@ -225,44 +228,34 @@ section .title::after{
 /* about section styling */
 /* .about .title::after{
 } */
-.about .about-content .left{
-    width: 45%;
-}
-.about .about-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about .about-content .right{
+
+.about .about-content .center{
     width: 55%;
+    text-align: center;
 }
-.about .about-content .right .text{
+.about .about-content .center .text{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.about .about-content .right .text span{
+.about .about-content .center .text span{
     color: #3F88C5;
 }
-.about .about-content .right p{
-    text-align: justify;
-}
-.about .about-content .right a{
+
+.about .about-content .center a{
     display: inline-block;
-    background: #3F88C5;
+    background: #000;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid #3F88C5;
+    margin: 20px;
+    border: 2px solid #000;
     transition: all 0.3s ease;
 }
-.about .about-content .right a:hover{
+.about .about-content .center a:hover{
     color: #3F88C5;
-    background: none;
+    /* background: none; */
 }
 
 /* services section styling */
@@ -274,13 +267,24 @@ section .title::after{
 .teams .title::before{
     background: #fff;
 }
-/* .services .title::after, */
-/* .teams .title::after{
-    background: #111;
-    content: "what i provide";
-} */
-.services .serv-content .card{
+
+
+.services .container { 
+    display: flex; 
+    flex-flow: row wrap;
+  }
+  
+.services .card-wrap {
+    flex: 0 0 33.333%;
+    display: flex;
+    padding: 10px; /* gutter width */
+}
+
+.services .card {
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    flex: 0 0 100%;
     width: calc(33% - 20px);
+    color: #fff;
     background: #222;
     text-align: center;
     border-radius: 6px;
@@ -288,24 +292,19 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+.services .card:hover{
     background: #3F88C5;
 }
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
+
+.services .card i{
     font-size: 50px;
     color: #3F88C5;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+.services .card:hover i{
     color: #fff;
 }
-.services .serv-content .card .text{
+.services .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
