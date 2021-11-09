@@ -25,6 +25,7 @@ html{
 }
 ::-webkit-scrollbar-thumb {
     background: #888;
+    
 }
 
 ::-webkit-scrollbar-thumb:hover {
