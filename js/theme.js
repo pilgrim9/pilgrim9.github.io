@@ -5,20 +5,14 @@ export function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         root.setAttribute('data-theme', savedTheme);
-    } else {
-        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (systemDark) {
-            root.setAttribute('data-theme', 'dark');
-        } else {
-            root.setAttribute('data-theme', 'light');
-        }
+        updateIcon(savedTheme);
     }
 
     toggle?.addEventListener('click', () => {
         const currentTheme = root.getAttribute('data-theme');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-        let newTheme: string;
+        let newTheme;
         if (currentTheme === 'dark' || (!currentTheme && systemDark)) {
             newTheme = 'light';
         } else {
@@ -27,5 +21,13 @@ export function initTheme() {
 
         root.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        updateIcon(newTheme);
     });
+
+    function updateIcon(theme) {
+        if (!toggle) return;
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = theme === 'dark' || (!theme && systemDark);
+        toggle.textContent = isDark ? '☀️' : '🌙';
+    }
 }
