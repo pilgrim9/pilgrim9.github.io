@@ -3,11 +3,8 @@ export async function loadMediumArticles() {
     if (!container) return;
 
     try {
-        // Medium RSS feed
         const username = 'gorostiagamanuel';
         const rssUrl = `https://medium.com/feed/@${username}`;
-
-        // Use RSS2JSON service to convert Medium RSS to JSON
         const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
         const response = await fetch(apiUrl);
@@ -23,7 +20,7 @@ export async function loadMediumArticles() {
                 const showButton = allArticles.length > initialCount;
 
                 container.innerHTML = articlesToShow
-                    .map((post: any) => {
+                    .map((post) => {
                         const title = post.title;
                         const link = post.link;
                         return `<div class="article-item"><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a></div>`;

@@ -1,9 +1,4 @@
-interface Project {
-    title: string;
-    url: string;
-}
-
-const projects: Project[] = [
+const projects = [
     {
         title: 'The Tavern at the End of the Road: A Soulslike Deckbuilder',
         url: 'https://store.steampowered.com/app/3933280/The_Tavern_at_the_End_of_the_Road'
