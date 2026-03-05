@@ -5,7 +5,13 @@ export function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         root.setAttribute('data-theme', savedTheme);
-        updateIcon(savedTheme);
+    } else {
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (systemDark) {
+            root.setAttribute('data-theme', 'dark');
+        } else {
+            root.setAttribute('data-theme', 'light');
+        }
     }
 
     toggle?.addEventListener('click', () => {
@@ -21,13 +27,5 @@ export function initTheme() {
 
         root.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
-        updateIcon(newTheme);
     });
-
-    function updateIcon(theme: string) {
-        if (!toggle) return;
-        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const isDark = theme === 'dark' || (!theme && systemDark);
-        toggle.textContent = isDark ? '☀️' : '🌙';
-    }
 }
