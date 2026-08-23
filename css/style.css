@@ -22,6 +22,7 @@
     --steam-hover: #2a475e;
     --steam-border: rgba(102, 192, 244, 0.3);
     --steam-color: #c7d5e0;
+    --font-name: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
     --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --nav-height: 4.25rem;
@@ -112,9 +113,10 @@ button {
 }
 
 .nav-brand-title {
-    font-size: 1.125rem;
+    font-family: var(--font-name);
+    font-size: 1.25rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     color: var(--text-primary);
 }
 
@@ -285,10 +287,11 @@ button {
 }
 
 .hero-title {
-    font-size: clamp(2.75rem, 7vw, 5.5rem);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.04em;
+    font-family: var(--font-name);
+    font-size: clamp(3rem, 7.5vw, 5.75rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
     margin-bottom: 1.5rem;
     background: linear-gradient(180deg, #ffffff 30%, #a1a1aa 100%);
     -webkit-background-clip: text;
@@ -352,12 +355,16 @@ button {
     width: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
-    padding: 0 2rem 6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
+    padding: 2rem 2rem 6rem;
     position: relative;
     z-index: 1;
+}
+
+#projects-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: 100%;
 }
 
 .section-header {
@@ -573,29 +580,12 @@ button {
     color: var(--text-primary);
 }
 
-.project-role-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: var(--accent-gold-bg);
-    border: 1px solid var(--accent-gold-border);
-    border-radius: 0.5rem;
-    width: fit-content;
-}
-
-.role-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+.project-role-subtitle {
+    font-size: 1.05rem;
+    font-weight: 500;
     color: var(--accent-gold);
-}
-
-.role-name {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-primary);
+    letter-spacing: 0.01em;
+    margin-top: -0.5rem;
 }
 
 .project-description {

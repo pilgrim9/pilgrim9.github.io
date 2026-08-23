@@ -124,15 +124,10 @@ export function renderProjects() {
                     <div class="project-content">
                         <div class="project-meta-top">
                             <span class="project-type-badge">${project.type}</span>
-                            <span class="project-index">0${index + 1} / 0${projects.length}</span>
                         </div>
                         
                         <h2 class="project-title">${project.title}</h2>
-                        
-                        <div class="project-role-badge">
-                            <span class="role-label">Role:</span>
-                            <span class="role-name">${project.role}</span>
-                        </div>
+                        <div class="project-role-subtitle">${project.role}</div>
 
                         <p class="project-description">${project.description}</p>
                         
